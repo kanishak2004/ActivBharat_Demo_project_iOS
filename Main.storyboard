@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="24506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tab-bar-controller">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tab Bar Controller-->
+        <scene sceneID="scene-tab">
+            <objects>
+                <tabBarController id="tab-bar-controller" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="tab-bar">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="home-controller" kind="relationship" relationship="viewControllers" id="segue-home"/>
+                        <segue destination="explore-controller" kind="relationship" relationship="viewControllers" id="segue-explore"/>
+                        <segue destination="train-navigation-controller" kind="relationship" relationship="viewControllers" id="segue-train"/>
+                        <segue destination="celebrate-controller" kind="relationship" relationship="viewControllers" id="segue-celebrate"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="first-responder-tab" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2054" y="-414"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="scene-home">
+            <objects>
+                <viewController id="home-controller" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="home-view">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="home-safe"/>
+                        <color key="backgroundColor" systemColor="systemBrownColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Home" id="home-tab"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="home-first-responder" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1590" y="425"/>
+        </scene>
+        <!--Explore-->
+        <scene sceneID="scene-explore">
+            <objects>
+                <viewController storyboardIdentifier="ExploreViewController" id="explore-controller" customClass="ExploreViewController" customModule="ActivBharat_Demo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="explore-view">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ZNZ-C5-SRU">
+                                <rect key="frame" x="0.0" y="118" width="393" height="617"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="explore-safe"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="explore-safe" firstAttribute="bottom" secondItem="ZNZ-C5-SRU" secondAttribute="bottom" id="55U-in-Rj1"/>
+                            <constraint firstItem="explore-safe" firstAttribute="trailing" secondItem="ZNZ-C5-SRU" secondAttribute="trailing" id="ETB-bh-Kga"/>
+                            <constraint firstItem="ZNZ-C5-SRU" firstAttribute="top" secondItem="explore-safe" secondAttribute="top" id="eLe-bz-8Lo"/>
+                            <constraint firstItem="ZNZ-C5-SRU" firstAttribute="leading" secondItem="explore-safe" secondAttribute="leading" id="gGI-F6-WuS"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Explore" id="explore-tab"/>
+                    <connections>
+                        <outlet property="tableView" destination="ZNZ-C5-SRU" id="a7c-Nc-U0Z"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="explore-first-responder" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3356" y="386"/>
+        </scene>
+        <!--Celebrate-->
+        <scene sceneID="scene-celebrate">
+            <objects>
+                <viewController id="celebrate-controller" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="celebrate-view">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="celebrate-safe"/>
+                        <color key="backgroundColor" systemColor="systemPinkColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Celebrate" id="celebrate-tab"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="celebrate-first-responder" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2492" y="425"/>
+        </scene>
+        <!--Train-->
+        <scene sceneID="scene-nav">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="train-navigation-controller" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Train" id="train-tab"/>
+                    <navigationBar key="navigationBar" hidden="YES" contentMode="scaleToFill" id="train-nav-bar">
+                        <rect key="frame" x="0.0" y="118" width="393" height="54"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="train-controller" kind="relationship" relationship="rootViewController" id="segue-train-root"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nav-first-responder" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-756" y="386"/>
+        </scene>
+        <!--Train View Controller-->
+        <scene sceneID="scene-train">
+            <objects>
+                <viewController storyboardIdentifier="TrainViewController" id="train-controller" customClass="TrainViewController" customModule="ActivBharat_Demo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="train-view">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="train-table">
+                                <rect key="frame" x="0.0" y="172" width="393" height="563"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="train-fixed-button">
+                                <rect key="frame" x="20" y="672" width="353" height="55"/>
+                                <color key="backgroundColor" red="0.070588235294117646" green="0.070588235294117646" blue="0.082352941176470587" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Start Running">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="train-safe"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="train-safe" firstAttribute="bottom" secondItem="train-fixed-button" secondAttribute="bottom" constant="8" id="train-button-bottom"/>
+                            <constraint firstItem="train-fixed-button" firstAttribute="height" constant="55" id="train-button-height"/>
+                            <constraint firstItem="train-fixed-button" firstAttribute="leading" secondItem="train-safe" secondAttribute="leading" constant="20" id="train-button-leading"/>
+                            <constraint firstItem="train-safe" firstAttribute="trailing" secondItem="train-fixed-button" secondAttribute="trailing" constant="20" id="train-button-trailing"/>
+                            <constraint firstItem="train-safe" firstAttribute="bottom" secondItem="train-table" secondAttribute="bottom" id="train-table-bottom"/>
+                            <constraint firstItem="train-table" firstAttribute="leading" secondItem="train-safe" secondAttribute="leading" id="train-table-leading"/>
+                            <constraint firstItem="train-table" firstAttribute="top" secondItem="train-safe" secondAttribute="top" id="train-table-top"/>
+                            <constraint firstItem="train-safe" firstAttribute="trailing" secondItem="train-table" secondAttribute="trailing" id="train-table-trailing"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="train-navigation-item"/>
+                    <connections>
+                        <outlet property="fixedStartButton" destination="train-fixed-button" id="outlet-train-button"/>
+                        <outlet property="tableView" destination="train-table" id="outlet-train-table"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="train-first-responder" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="308" y="35"/>
+        </scene>
+        <!--Connect View Controller-->
+        <scene sceneID="scene-connect">
+            <objects>
+                <viewController storyboardIdentifier="ConnectViewController" id="connect-controller" customClass="ConnectViewController" customModule="ActivBharat_Demo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="connect-view">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="connect-table">
+                                <rect key="frame" x="0.0" y="118" width="393" height="666"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="sectionIndexBackgroundColor" red="0.93768442220000003" green="0.76473977729999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="connect-safe"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="connect-safe" firstAttribute="bottom" secondItem="connect-table" secondAttribute="bottom" id="connect-table-bottom"/>
+                            <constraint firstItem="connect-table" firstAttribute="leading" secondItem="connect-safe" secondAttribute="leading" id="connect-table-leading"/>
+                            <constraint firstItem="connect-table" firstAttribute="top" secondItem="connect-safe" secondAttribute="top" id="connect-table-top"/>
+                            <constraint firstItem="connect-safe" firstAttribute="trailing" secondItem="connect-table" secondAttribute="trailing" id="connect-table-trailing"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="connect-navigation-item"/>
+                    <connections>
+                        <outlet property="tableView" destination="connect-table" id="outlet-connect-table"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="connect-first-responder" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-756" y="-414"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBrownColor">
+            <color red="0.63529411759999999" green="0.51764705879999995" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="24506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="WorkoutCardCollectionViewCell" id="gTV-IL-0wX" customClass="WorkoutCardCollectionViewCell" customModule="ActivBharat_Demo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="246" height="208"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="246" height="208"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cardView">
+                        <rect key="frame" x="0.0" y="0.0" width="246" height="208"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" image="BeachWorkout" translatesAutoresizingMaskIntoConstraints="NO" id="workoutImageView">
+                                <rect key="frame" x="8" y="8" width="230" height="132"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Diet Dance Part II For Non-Dancers" numberOfLines="2" translatesAutoresizingMaskIntoConstraints="NO" id="titleLabel">
+                                <rect key="frame" x="12" y="148" width="222" height="40"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="20 mins • Beginner" translatesAutoresizingMaskIntoConstraints="NO" id="subtitleLabel">
+                                <rect key="frame" x="12" y="192" width="222" height="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" red="0.6117647059" green="0.33725490200000002" blue="0.96078431369999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="workoutImageView" firstAttribute="leading" secondItem="cardView" secondAttribute="leading" constant="8" id="card-image-leading"/>
+                            <constraint firstItem="workoutImageView" firstAttribute="top" secondItem="cardView" secondAttribute="top" constant="8" id="card-image-top"/>
+                            <constraint firstItem="workoutImageView" firstAttribute="trailing" secondItem="cardView" secondAttribute="trailing" constant="-8" id="card-image-trailing"/>
+                            <constraint firstItem="workoutImageView" firstAttribute="height" constant="132" id="card-image-height"/>
+                            <constraint firstItem="titleLabel" firstAttribute="leading" secondItem="cardView" secondAttribute="leading" constant="12" id="card-title-leading"/>
+                            <constraint firstItem="titleLabel" firstAttribute="top" secondItem="workoutImageView" secondAttribute="bottom" constant="8" id="card-title-top"/>
+                            <constraint firstItem="titleLabel" firstAttribute="trailing" secondItem="cardView" secondAttribute="trailing" constant="-12" id="card-title-trailing"/>
+                            <constraint firstItem="subtitleLabel" firstAttribute="leading" secondItem="cardView" secondAttribute="leading" constant="12" id="card-sub-leading"/>
+                            <constraint firstItem="subtitleLabel" firstAttribute="top" secondItem="titleLabel" secondAttribute="bottom" constant="4" id="card-sub-top"/>
+                            <constraint firstItem="subtitleLabel" firstAttribute="trailing" secondItem="cardView" secondAttribute="trailing" constant="-12" id="card-sub-trailing"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="cardView" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="workout-card-leading"/>
+                <constraint firstItem="cardView" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="workout-card-top"/>
+                <constraint firstAttribute="trailing" secondItem="cardView" secondAttribute="trailing" id="workout-card-trailing"/>
+                <constraint firstAttribute="bottom" secondItem="cardView" secondAttribute="bottom" id="workout-card-bottom"/>
+            </constraints>
+            <size key="customSize" width="246" height="208"/>
+            <connections>
+                <outlet property="cardView" destination="cardView" id="workout-card-outlet"/>
+                <outlet property="subtitleLabel" destination="subtitleLabel" id="workout-sub-outlet"/>
+                <outlet property="titleLabel" destination="titleLabel" id="workout-title-outlet"/>
+                <outlet property="workoutImageView" destination="workoutImageView" id="workout-image-outlet"/>
+            </connections>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="BeachWorkout" width="393" height="262"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="24506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="ConnectPostTableViewCell" rowHeight="383" id="KGk-i7-Jjw" customClass="ConnectPostTableViewCell" customModule="ActivBharat_Demo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="389" height="383"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="389" height="383"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cardView">
+                        <rect key="frame" x="20" y="10" width="349" height="363"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="man-running 1" translatesAutoresizingMaskIntoConstraints="NO" id="avatarImage">
+                                <rect key="frame" x="16" y="16" width="38" height="38"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Dragon_Slayer" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="authorLabel">
+                                <rect key="frame" x="66" y="15.000000000000002" width="267" height="21.666666666666671"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="5 mins ago" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="timeLabel">
+                                <rect key="frame" x="66" y="37.666666666666664" width="57.666666666666657" height="13.333333333333336"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <color key="textColor" systemColor="secondaryLabelColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Crushed my best pace today with  @thebodycoach 💪🔥" lineBreakMode="tailTruncation" numberOfLines="0" translatesAutoresizingMaskIntoConstraints="NO" id="captionLabel">
+                                <rect key="frame" x="8" y="70" width="349" height="13"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                <nil key="textColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" image="Rectangle 43977" translatesAutoresizingMaskIntoConstraints="NO" id="mediaImage">
+                                <rect key="frame" x="0.0" y="99" width="349" height="214"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="reactionsStack">
+                                <rect key="frame" x="16" y="323" width="219.66666666666666" height="28"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="reactionOne">
+                                        <rect key="frame" x="0.0" y="0.0" width="68.666666666666671" height="28"/>
+                                        <state key="normal" title="❤️ 12"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="❤️ 12"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="reactionTwo">
+                                        <rect key="frame" x="78.666666666666671" y="0.0" width="61.666666666666671" height="28"/>
+                                        <state key="normal" title="🔥 5"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="🔥 5"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="reactionThree">
+                                        <rect key="frame" x="150.33333333333334" y="0.0" width="69.333333333333343" height="28"/>
+                                        <state key="normal" title="💪 16"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="💪 16"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="captionLabel" firstAttribute="leading" secondItem="cardView" secondAttribute="leading" constant="8" id="T25-HD-Stf"/>
+                            <constraint firstItem="mediaImage" firstAttribute="height" constant="214" id="mediaHeightConstraint"/>
+                            <constraint firstItem="authorLabel" firstAttribute="leading" secondItem="avatarImage" secondAttribute="trailing" constant="12" id="post-author-leading"/>
+                            <constraint firstItem="authorLabel" firstAttribute="top" secondItem="cardView" secondAttribute="top" constant="15" id="post-author-top"/>
+                            <constraint firstItem="authorLabel" firstAttribute="trailing" secondItem="cardView" secondAttribute="trailing" constant="-16" id="post-author-trailing"/>
+                            <constraint firstItem="avatarImage" firstAttribute="height" constant="38" id="post-avatar-height"/>
+                            <constraint firstItem="avatarImage" firstAttribute="leading" secondItem="cardView" secondAttribute="leading" constant="16" id="post-avatar-leading"/>
+                            <constraint firstItem="avatarImage" firstAttribute="top" secondItem="cardView" secondAttribute="top" constant="16" id="post-avatar-top"/>
+                            <constraint firstItem="avatarImage" firstAttribute="width" constant="38" id="post-avatar-width"/>
+                            <constraint firstItem="captionLabel" firstAttribute="top" secondItem="avatarImage" secondAttribute="bottom" constant="16" id="post-caption-top"/>
+                            <constraint firstItem="captionLabel" firstAttribute="trailing" secondItem="cardView" secondAttribute="trailing" constant="8" id="post-caption-trailing"/>
+                            <constraint firstItem="mediaImage" firstAttribute="leading" secondItem="cardView" secondAttribute="leading" id="post-media-leading"/>
+                            <constraint firstItem="mediaImage" firstAttribute="top" secondItem="captionLabel" secondAttribute="bottom" constant="16" id="post-media-top"/>
+                            <constraint firstItem="mediaImage" firstAttribute="trailing" secondItem="cardView" secondAttribute="trailing" id="post-media-trailing"/>
+                            <constraint firstAttribute="bottom" secondItem="reactionsStack" secondAttribute="bottom" constant="12" id="post-reactions-bottom"/>
+                            <constraint firstItem="reactionsStack" firstAttribute="height" constant="28" id="post-reactions-height"/>
+                            <constraint firstItem="reactionsStack" firstAttribute="leading" secondItem="cardView" secondAttribute="leading" constant="16" id="post-reactions-leading"/>
+                            <constraint firstItem="reactionsStack" firstAttribute="top" secondItem="mediaImage" secondAttribute="bottom" constant="10" id="post-reactions-top"/>
+                            <constraint firstItem="timeLabel" firstAttribute="leading" secondItem="authorLabel" secondAttribute="leading" id="post-time-leading"/>
+                            <constraint firstItem="timeLabel" firstAttribute="top" secondItem="authorLabel" secondAttribute="bottom" constant="1" id="post-time-top"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="cardView" secondAttribute="bottom" constant="10" id="content-card-bottom"/>
+                    <constraint firstItem="cardView" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="content-card-leading"/>
+                    <constraint firstItem="cardView" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="content-card-top"/>
+                    <constraint firstItem="cardView" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailing" constant="-20" id="content-card-trailing"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="authorLabel" destination="authorLabel" id="post-author-outlet"/>
+                <outlet property="avatarImageView" destination="avatarImage" id="post-avatar-outlet"/>
+                <outlet property="captionLabel" destination="captionLabel" id="post-caption-outlet"/>
+                <outlet property="cardView" destination="cardView" id="post-card-outlet"/>
+                <outlet property="mediaHeightConstraint" destination="mediaHeightConstraint" id="post-media-height-outlet"/>
+                <outlet property="mediaImageView" destination="mediaImage" id="post-media-outlet"/>
+                <outlet property="reactionOneButton" destination="reactionOne" id="post-reaction-one-outlet"/>
+                <outlet property="reactionThreeButton" destination="reactionThree" id="post-reaction-three-outlet"/>
+                <outlet property="reactionTwoButton" destination="reactionTwo" id="post-reaction-two-outlet"/>
+                <outlet property="reactionsStackView" destination="reactionsStack" id="post-reactions-stack-outlet"/>
+                <outlet property="timeLabel" destination="timeLabel" id="post-time-outlet"/>
+            </connections>
+            <point key="canvasLocation" x="-31.297709923664122" y="65.140845070422543"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="Rectangle 43977" width="328" height="217"/>
+        <image name="man-running 1" width="119" height="178"/>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
